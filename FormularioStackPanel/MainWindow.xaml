@@ -16,6 +16,14 @@
             <Setter Property="Padding" Value="5"/>
             <Setter Property="FontWeight" Value="Bold"/>
         </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}" x:Key="TextBoxAcortado" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="Width" Value="500"/>
+            <Setter Property="MaxWidth" Value="500"/>
+        </Style>
     </Window.Resources>
     
     <StackPanel>
@@ -27,7 +35,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <TextBlock>Nombre</TextBlock>
-            <TextBox Margin="5,0"></TextBox>
+            <TextBox></TextBox>
         </StackPanel>
         <StackPanel Height="70">
             <StackPanel.Background>
@@ -37,7 +45,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <TextBlock>Dirección</TextBlock>
-            <TextBox Margin="5,0"></TextBox>
+            <TextBox></TextBox>
         </StackPanel>
         <StackPanel Height="70">
             <StackPanel.Background>
@@ -47,7 +55,7 @@
                 </LinearGradientBrush>
             </StackPanel.Background>
             <TextBlock>Correo Electrónico</TextBlock>
-            <TextBox Margin="5,0" HorizontalAlignment="Left" Width="500" MaxWidth="500"></TextBox>
+            <TextBox Style="{StaticResource TextBoxAcortado}"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button>Aceptar</Button>
