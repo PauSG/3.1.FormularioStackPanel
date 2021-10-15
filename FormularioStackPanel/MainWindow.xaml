@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Icon="assets/128.ico"
         Title="MainWindow" Height="350" MinHeight="300" MinWidth="300" Width="735">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="75"/>
+            <Setter Property="Margin" Value="5,0"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    
     <StackPanel>
         <StackPanel Height="70">
             <StackPanel.Background>
@@ -15,7 +26,7 @@
                     <GradientStop Color="White" Offset="0.753"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Padding="5">Nombre</TextBlock>
+            <TextBlock>Nombre</TextBlock>
             <TextBox Margin="5,0"></TextBox>
         </StackPanel>
         <StackPanel Height="70">
@@ -25,7 +36,7 @@
                     <GradientStop Color="White" Offset="0.62"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Padding="5">Dirección</TextBlock>
+            <TextBlock>Dirección</TextBlock>
             <TextBox Margin="5,0"></TextBox>
         </StackPanel>
         <StackPanel Height="70">
@@ -35,12 +46,12 @@
                     <GradientStop Color="White" Offset="0.77"/>
                 </LinearGradientBrush>
             </StackPanel.Background>
-            <TextBlock Padding="5">Correo Electrónico</TextBlock>
+            <TextBlock>Correo Electrónico</TextBlock>
             <TextBox Margin="5,0" HorizontalAlignment="Left" Width="500" MaxWidth="500"></TextBox>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Margin="5,0" Width="75">Aceptar</Button>
-            <Button Margin="5,0" Width="75">Cancelar</Button>
+            <Button>Aceptar</Button>
+            <Button>Cancelar</Button>
         </StackPanel>
         
     </StackPanel>
